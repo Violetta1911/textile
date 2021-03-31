@@ -1,0 +1,192 @@
+
+
+ $green: #9fbf30;
+ $grey: #b4b4b4;
+ 
+
+ @mixin flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ } 
+ 
+ @mixin icons-header {
+    position: absolute;
+    left:0;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+ } 
+ @mixin icons-header-menu {
+    position: absolute;
+         top: -40px;
+         left: 50%;
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+         color: #fff;
+         padding-top: 10px;
+         padding-left: 10px;
+         font-size: 16px; 
+ }
+ @mixin icon-block {
+    position: absolute;
+    top: -52px;
+    left: 80px;
+    width: 116px;
+    height: 116px;
+    padding-top: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 30px;    
+ }
+ @mixin font {
+   text-transform: uppercase;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+ }
+ @mixin btn{
+   border-radius: 5px;
+   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+   background-color: $red;   
+   color: #fff;
+   border: none;
+ }
+
+ @mixin btn-font {   
+   color: rgb(102, 102, 102);
+   font-size: 14px;
+ }
+ @mixin bg-image {
+   background-position:bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-align: center;
+   color: #fff;
+   font-family: 'OpenSans', sans-serif;
+   h2 {
+      margin-bottom: 20px;
+   }
+ }
+@mixin items {
+   padding-bottom: 24px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+   background-color: $grey;
+   font-family: 'OpenSans', sans-serif;
+   color: rgb(102, 102, 102);
+   &-info {
+      padding: 0 10px 0 20px;
+   }
+   &-img {
+      padding: 20px;
+      margin-bottom: 20px;
+      border-bottom: 5px solid $yellow ;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      &.border--green {
+         border-bottom: 5px solid $green;
+      } 
+      &.border--red {
+         border-bottom: 5px solid $red;
+      } 
+      &.border--blue {
+         border-bottom: 5px solid $blue;
+      }   
+   }
+   p {
+      margin: 18px 0 20px;
+      font-size: 14px;
+      line-height: 1.714;
+   }
+}
+@mixin more {
+         &:hover {
+         border-bottom: 1px solid $yellow;
+         color: $yellow;
+         &.font--blue {
+            border-bottom: 1px solid $blue;
+         color: $blue;
+         }
+         &.font--green {
+            border-bottom: 1px solid $green;
+         color: $green;
+         }
+         &.font--red {
+            border-bottom: 1px solid $red;
+         color: $red;
+         }           
+   }
+   
+}
+@mixin caret-up {
+   content: "\f0d8";
+      font-family: 'icomoon';
+      position: absolute;
+      font-size: 24px;
+      top: -20px;
+}
+@mixin dropdown {
+   width: 230px;
+   position: absolute;
+   z-index: 0;
+   padding: 20px 10px;
+   background-color: #fff;
+   border-top: 3px solid $red;
+   border-radius: 5px;
+
+}
+
+//  @mixin slider-btn {
+    
+//     button {
+//         &.slick-prev,
+//         &.slick-next{
+//             width: 22px;
+//             height: 22px;
+//             background-color: $blue_fonts; 
+                  
+//          }   
+//     }   
+//     .slick-next {
+//         right: 15px;
+//     }
+//     .slick-next:before {
+//         content: "\f105"; 
+//         position: absolute;  
+//         top: 0px;
+//         right: 6px;
+//     }
+//     .slick-prev {
+//         left: 1100px;
+        
+//     }     
+//     .slick-prev:before {
+//         content: "\f104";
+//         position: absolute;  
+//         top: 0px;
+//         left: 6px;  
+//     }
+//     .slick-prev, .slick-next {
+       
+//         top: 254px;
+//         display: block;
+//         cursor: none;
+//         border: none;
+//     }
+//     .slick-prev:before, .slick-next:before {
+//         font-family: 'icomoon';
+//         font-size: 20px;
+//         line-height: 20px;        
+//         color: white;
+//         cursor:pointer;      
+//     }
+//  }
+ 
+  
+  
