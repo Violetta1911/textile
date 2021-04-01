@@ -68,6 +68,7 @@
         .user-block {
             width: 820px;
             @include flex;
+            align-items: center;
             position: relative;
         }  
         .icon-shopping-cart{
@@ -131,8 +132,10 @@
 // aside
 aside {
     min-width: 320px;
+    height: 100%;
     border: 1px solid $green;
     border-left: none;
+    border-bottom: none;
     padding-top: 25px ;
 
 .fabric-categories {
@@ -189,9 +192,13 @@ aside {
        font-weight: 300; 
     }
     .user-choice {
-        @include flex;
-        flex-wrap: wrap;
+       
         margin-top: 10px;
+        padding-right: 20px;
+        &__inner {
+            @include flex;
+            flex-wrap: wrap;
+        }
         button {
             width: 90px;
             height: 40px;
@@ -230,13 +237,177 @@ aside {
         }
     }
 }
-
+.js-range-slider {
+    width: 95%;
+}
+.irs--flat {
+    .irs-from,
+    .irs-to {
+        color: $green;
+        background-color: $green;
+        border-radius:50%;
+        top: 20px;
+        line-height: 0;
+        width: 15px;
+        height: 15px;
+    }
+    
 }
 
-.main-content {
-    min-width: 100%;
+.irs--flat .irs-single {
+    color: $green;
+        font-size: 0px;
+        padding: 1px 5px;
+        background-color: $green;
+        border-radius:50%;
 }
 
- 
+.irs--flat .irs-min, .irs--flat .irs-max{
+    display: none;
+}
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+    display: none;
+    content: "0";   
+}
+.irs--flat  {
+    .irs-to   {
+          font-size: 0;
+  }
+  .irs-line{
+      height: 5px;
+  }
+  }
+  .irs--flat .irs-bar {
+    height: 0;   
+}
+.irs--flat .irs-handle>i:first-child {
+      display: none;   
+}
+}
+// *********************products****************************
+.products {
+     width: 815px; ;
+}
+.sort-menu {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #858585;
+    margin-bottom: 40px;
+    li {
+        display: inline-block;
+        a {
+            color: $green;
+            position: relative;
+            margin-left: 40px;
+        }
+        a::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -10px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $green;
+        }
+    }
+}
+.products__slider {
+    // width: 850px;
+    margin-bottom: 60px;
+}
 
-  
+.products__inner-box {
+   display: flex;
+   justify-content: space-around;
+    flex-wrap: wrap;
+    h3{
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    }
+}
+.product__item {
+    flex-basis: 33,333%;
+    margin-bottom: 70px;
+    position: relative;
+    &::after {
+        content: "\f08a";
+        font-family: 'icomoon';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #ffffff;
+    }
+}
+.product__item-img {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 15px;
+}
+.article-numder {
+    font-size: 16px;
+    color: $grey;
+}
+.stucture {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.price {
+    margin-bottom: 15px;
+    color: $green;
+    text-align: right;
+    font-size: 30px;
+    position: relative;
+    &::before{
+        content: '90грн';
+        color: $grey;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-decoration: line-through;    }
+}
+.btn-buy {
+    width: 100%;
+    padding: 10px 0;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: $green;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.price-group{
+    text-align: center;
+    color: $grey;
+    height: 28px;
+    position: relative;
+    &::before{
+        content: url(../images/item_icon.png);
+        position: absolute;
+        left: 50px;
+        top: -5px;
+    }
+}
+.products__more {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+}
+.btn-more {
+    
+    margin-right: 155px;
+    text-decoration: underline;
+    text-decoration-color: $grey;
+}
+.products-pagination{
+    .page__numbers,
+    .page__dots {
+        display: inline-block;
+        color: $grey;
+        &.active{        
+            color: black;        
+    } 
+    }
+     
+}

@@ -1,6 +1,6 @@
 $(function(){
 
-    $('.product-slider__inner').slick({
+    $('.products__slider').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -8,21 +8,13 @@ $(function(){
       dots: false,
           });
 
-    $(".js-range-slider").ionRangeSlider({
-        skin: "big",
-        type: "double",
-        min: 0,
-        max: 0,
-        from: 0,
-        to: 0,
-       
-        grid: false,             // show/hide grid
-        force_edges: false,     // force UI in the box
-        hide_min_max: false,    // show/hide MIN and MAX labels
-        hide_from_to: false,    // show/hide FROM and TO labels
-        block: false   
-  });
-
+          $(".js-range-slider").ionRangeSlider({
+            type: "double",
+            min: 0,
+            max: 1000,
+            from: 0
+            
+        });
   
   $('.gtbuilder__tab  .tab, .personal-info__tab .tab').on('click', function(event) {
     var id = $(this).attr('data-id');
